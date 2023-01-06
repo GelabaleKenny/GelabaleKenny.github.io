@@ -1,65 +1,282 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CV de Kenny</title>
+        <title>CV Kenny</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
     </head>
-
-    <body>
-        <div class="wrapper">
-
-            <div class="sideBar-wrapper"> <img src="images/photo-profil-cv.jpg" alt="Gelabale kenny" class="img1">
-                <div class="profile-container">
-                    <h1 class="nom">Gelabale Kenny</h1> 
-                    <h3 class="metier">Développeur web en formation</h3>
+    
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="60">
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <div class="contact">
-                    <ul><li class="email"> <img src="images/mail.png" alt="mail"><a href="mailto:kenny.gelabale@yahoo.com">kenny.gelabale@yahoo.com</a></li>
-                        <li class="phone"><img src="images/phone.png" alt="phone"><a href="tel:+33631387616">0631387616</a></li>
-                        </ul>
-                </div>
-                <div><h2>compétence</h2>
-                
-                <ul>Html
-                    <ul>
-                        <li>Définir le lien entre HTML et CSS </li>
-                        <li>Analyser une maquette pour la transformer en page web</li>
-                        <li>Structurer une page web</li>
-                        <li>Maîtriser les langages HTML et CSS pour produire un code lisible</li>
-                        
-                    </ul>
-                </ul>
-                    <ul>css
-                        <ul>
-                        <li>Mettre en forme une page web grâce au CSS</li>
-                            <li>Transformer une maquette en page web</li>
-                            <li>Vérifier la compatbilité du site avec les navigateurs</li>
-                            <li> Créer des pages responsive qui fonctionnent sur ordinateur, tablette et smartphone</li>
-                        </ul>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#about">Moi</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <!-- <li><a href="#recommandations">Recommandations</a></li> -->
                     </ul>
                 </div>
-
-                <div>
-                    <h2>Projets</h2>
-                    <p>Creation d'une fiche de lecture </p>
-                    <p>Création d'une page internet sur la <strong>série hero corp</strong></p>
-                    <p>Création d'une page internet avec <strong>flexbox</strong> en pair programming</p>
-                    <p>Création d'un blog sur les caméleon </p>
-                    
-                </div>
-
-
-
-
-
-
-
-
+            
             </div>
-         
+        
+        </nav>
+       
+        <section id="about" class="container-fluid">
+            <div class="col-xs-8 col-md-4 profile-picture">
+                <img src="images/me.png" alt="Kenny" class="img-circle">
+            </div>
+            <div class="heading">
+                <h1>Gelabale Kenny</h1>
+                <h3>Développeur Web & web mobile</h3>
+                <a href="docs/Gelabale-Kenny-CV.pdf"target="_blank" class="button1">Télécharger CV</a>
+            </div>
+        </section>
+        
+        
+        <section id="skills">
+            <div class="red-divider"></div>
+            <div class="heading">
+                <h2>Compétences</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                <h5>HTML 85%</h5>
+                            </div>
+                        </div>
+                        <div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                <h5>CSS 85%</h5>
+                            </div>
+                        </div>
+                        <div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                <h5>JAVASCRIPT 50%</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                <h5>PHP 50%</h5>
+                            </div>
+                        </div>
+                        <div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                <h5>BOOTSTRAP 80%</h5>
+                            </div>
+                        </div>
+                        <!-- <div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                <h5>ANGULAR 75%</h5>
+                            </div> -->
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+        
+            <div class="container">
+                <div class="white-divider"></div>
+                <div class="heading">
+                    <h2>Expérience Professionelle</h2>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></div>
+                        <div class="timeline-panel-container">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Html</h3>
+                                    <h4> O'clock</h4>
+                                    <p class="text-muted"><small class="glyphicon glyphicon-time"></small> en cours</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Définir le lien entre HTML et CSS</p>
+                                    <p>Analyser une maquette pour la transformer en page web</p>
+                                    <p>Structurer une page web</p>
+                                    <p>Maîtriser les langages HTML et CSS pour produire un code lisible</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></div>
+                        <div class="timeline-panel-container-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>CSS</h3>
+                                    <h4>O'clock</h4>
+                                    <p class="text-muted"><small class="glyphicon glyphicon-time"></small> En cours</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mettre en forme une page web grâce au CSS</p>
+                                    <p> Transformer une maquette en page web</p>
+                                    <p>Vérifier la compatbilité du site avec les navigateurs</p>
+                                    <p>Créer des pages responsive qui fonctionnent sur ordinateur, tablette et smartphone</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></div>
+                        <div class="timeline-panel-container">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>PHP</h3>
+                                    <h4>O'clock</h4>
+                                    <p class="text-muted"><small class="glyphicon glyphicon-time"></small> En cours</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Définir une variable</p>
+                                    <p>Reconnaitre les different valeur (string / int / float...)</p>
+                                    <p>Créer et gerer les Array</p>
+                                    <p>Réaliser des boucle ( while / for / foreach)</p>
+                                    <p>Réaliser des condition (if /else if / else)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></div>
+                        <div class="timeline-panel-container-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>javaScript</h3>
+                                    <h4>O'clock</h4>
+                                    <p class="text-muted"><small class="glyphicon glyphicon-time"></small> En cours</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Définir une variable</p>
+                                    <p>Modifier le DOM & écouter des action ( click / scroll)</p>
+                                    <p>Gestion des coockie et de localStorage</p>
+                                    <p>Dynamiser une page</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></div>
+                        <div class="timeline-panel-container">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Boutstrap</h3>
+                                    <h4>O'clock</h4>
+                                    <p class="text-muted"><small class="glyphicon glyphicon-time"></small> En cours</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Utilisation des class</p>
+                                    <p>Moditier le style avec un CSS perosnalisé</p>
+                                    <p>Utilisation des bout de code pré-définie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+            
+            </ul>
         </div>
+
+            
+        </section>
+                
+        <section id="education">
+            <div class="container">
+                 <div class="red-divider"></div>
+                <div class="heading">
+                    <h2>Education</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="education-block">
+                            <h5>2022 - 2023</h5>
+                            <span class="glyphicon glyphicon-education"></span>
+                            <h3>École O'clock - Paris</h3>
+                            <h4>Formation Développeur web & web mobile</h4>
+                        </div>
+                    </div>
+                     <div class="col-sm-6">
+                         <div class="education-block">
+                            <h5>2018</h5>
+                            <span class="glyphicon glyphicon-education"></span>
+                            <h3>ATK conseil</h3>
+                            <h4>Responsable Petites et Moyennes structures</h4>
+                            <div class="red-divider"></div>
+                            <p>Gestion du personel</p>
+                            <p>adaptation du type de management</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="education-block">
+                           <h5>2013 - 2015</h5>
+                           <span class="glyphicon glyphicon-education"></span>
+                           <h3>Akor alternance</h3>
+                           <h4>BTS Management des unités commercial</h4>
+                        </div>
+                  </div>  
+                  <div class="col-sm-6">
+                    <div class="education-block">
+                       <h5>2013</h5>
+                       <span class="glyphicon glyphicon-education"></span>
+                       <h3>Lycée Mistral</h3>
+                       <h4>Baccalauréat : Prospection, négociation et suivis clientèle</h4>
+                    </div>
+              </div>  
+                </div>
+            </div>
+        
+        </section>
+        
+        <section id="portfolio">
+            <div class="container">
+                <div class="white-divider"></div>
+                <div class="heading">
+                    <h2>Portfolio</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a class="thumbnail" href="https://www.linkedin.com/in/kenny-gelabale/" target="_blank">
+                            <img src="images/linkdin.png" alt="Linkedin share">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </section>
+             
+        <footer class="text-center">
+            <a href="#about">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <h5>© Kenny Gelabale</h5>
+        </footer>
+                
+        
+        
     </body>
+
 </html>
