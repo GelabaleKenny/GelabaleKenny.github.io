@@ -47,7 +47,7 @@ section .heading h2
 /* MENU */
 .navbar
 {
-    background: lightslategray;
+    background: #223f43;
     font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -89,7 +89,7 @@ section .heading h2
 #about
 {
     padding-top: 100px;
-    background: lightslategray;
+    background-image: url(../images/background-2.jpg);
 }
 .profile-picture
 {
@@ -132,7 +132,7 @@ section .heading h2
 }
 #skills .heading h2
 {
-    color: lightslategray;
+    color: #ff3d00;
 }
 #skills .progress
 {
@@ -152,7 +152,7 @@ section .heading h2
 /* EXPERIENCE */
 #experience
 {
-    background: lightslategray;
+    background-image: url(../images/background-2.jpg);
 }
 #experience .heading h2
 {
@@ -266,7 +266,7 @@ section .heading h2
 }
 #education .heading h2
 {
-    color: lightslategray;
+    color: #ff3d00;
 }
 .education-block
 {
@@ -310,7 +310,7 @@ section .heading h2
 /* PORTFOLIO */
 #portfolio
 {
-    background: lightslategray;
+    background-image: url(../images/background-2.jpg);
 }
 #portfolio .heading h2
 {
@@ -388,34 +388,3 @@ footer h5
     color: #fff;
     font-weight: normal;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
