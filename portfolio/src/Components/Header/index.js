@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./styles.css";
-const Header = ({ activeSection }) => {
+const Header = ({ activeSection, handleNavClick }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-center fixed-top">
       <div className="container">
@@ -13,6 +13,7 @@ const Header = ({ activeSection }) => {
               className={
                 activeSection === "about" ? "nav-item active" : "nav-item"
               }
+              onClick={() => handleNavClick("about")}
             >
               <a href="#about" className="linkNav ">
                 Présentation
@@ -22,22 +23,38 @@ const Header = ({ activeSection }) => {
               className={
                 activeSection === "skills" ? "nav-item active" : "nav-item"
               }
+              onClick={() => handleNavClick("skills")}
             >
               <a href="#skills" className="linkNav ">
                 Compétences
               </a>
             </li>
-            <li className="nav-item">
+            <li
+              className={
+                activeSection === "experience" ? "nav-item active" : "nav-item"
+              }
+              onClick={() => handleNavClick("experience")}
+            >
               <a href="#experience" className="linkNav ">
                 Expérience
               </a>
             </li>
-            <li className="nav-item">
+            <li
+              className={
+                activeSection === "education" ? "nav-item active" : "nav-item"
+              }
+              onClick={() => handleNavClick("education")}
+            >
               <a href="#education" className="linkNav ">
                 Éducation
               </a>
             </li>
-            <li className="nav-item">
+            <li
+              className={
+                activeSection === "portfolio" ? "nav-item active" : "nav-item"
+              }
+              onClick={() => handleNavClick("portfolio")}
+            >
               <a href="#portfolio" className="linkNav ">
                 Portfolio
               </a>
