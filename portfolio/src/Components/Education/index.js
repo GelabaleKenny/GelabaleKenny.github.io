@@ -23,43 +23,43 @@ const Education = ({ setActiveSection }) => {
 
   return (
     <section id="education" ref={educationRef}>
-      <div class="container">
-        <div class="red-divider"></div>
-        <div class="heading">
+      <div className="container">
+        <div className="red-divider"></div>
+        <div className="heading">
           <h2>Education</h2>
         </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="education-block">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="education-block">
               <h5>2022 - 2023</h5>
-              <span class="glyphicon glyphicon-education"></span>
+              <span className="glyphicon glyphicon-education"></span>
               <h3>École O'clock - Paris</h3>
               <h4>Formation Développeur web & web mobile</h4>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="education-block">
+          <div className="col-sm-6">
+            <div className="education-block">
               <h5>2018</h5>
-              <span class="glyphicon glyphicon-education"></span>
+              <span className="glyphicon glyphicon-education"></span>
               <h3>ATK conseil</h3>
               <h4>Responsable Petites et Moyennes structures</h4>
-              <div class="red-divider"></div>
+              <div className="red-divider"></div>
               <p>Gestion du personel</p>
               <p>adaptation du type de management</p>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="education-block">
+          <div className="col-sm-6">
+            <div className="education-block">
               <h5>2013 - 2015</h5>
-              <span class="glyphicon glyphicon-education"></span>
+              <span className="glyphicon glyphicon-education"></span>
               <h3>Akor alternance</h3>
               <h4>BTS Management des unités commercial</h4>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="education-block">
+          <div className="col-sm-6">
+            <div className="education-block">
               <h5>2013</h5>
-              <span class="glyphicon glyphicon-education"></span>
+              <span className="glyphicon glyphicon-education"></span>
               <h3>Lycée Mistral</h3>
               <h4>
                 Baccalauréat : Prospection, négociation et suivis clientèle

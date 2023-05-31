@@ -6,8 +6,17 @@ import linkedin from "../../Assets/images/linkedin.jpg";
 import snake from "../../Assets/images/snake.png";
 import bookmark from "../../Assets/images/bookmark.png";
 import { Link } from "react-router-dom";
+import ImageWithHoverButton from "../Demos/SnakeDemo/ImageWithHoverButton";
+import BookmarkDemo from "../Demos/BookmarkDemo";
+// import BookmarkPresentation from "../../Assets/video/Bookmark.mp4";
+import BookmarkVideo from "../Demos/BookmarkDemo/BookmarkVideo";
 
-const Portfolio = ({ setActiveSection }) => {
+const Portfolio = ({
+  setActiveSection,
+  openModal,
+  openBookmarkModal,
+  closeBookmarkModal,
+}) => {
   const portfolioRef = useRef(null);
 
   useEffect(() => {
@@ -29,39 +38,47 @@ const Portfolio = ({ setActiveSection }) => {
 
   return (
     <section id="portfolio" ref={portfolioRef}>
-      <div class="container">
-        <div class="white-divider"></div>
-        <div class="heading">
+      <div className="container">
+        <div className="white-divider"></div>
+        <div className="heading">
           <h2>Portfolio</h2>
         </div>
-        <div class="row">
-          <div class="col-sm-4 m mt-2">
-            <Link class="thumbnail" to={"/bookmark"} target="_blank">
-              <img src={bookmark} alt="apperçu du site Bookmark" />
-            </Link>
+        <div className="row">
+          <div className="col-sm-4 m mt-2">
+            <a className="thumbnail" onClick={openBookmarkModal}>
+              <img src={bookmark} alt="" />
+            </a>
           </div>
-          <div class="col-sm-4 m mt-2">
-            <Link class="thumbnail" href="images/maga-sap.png" target="_blank">
+          <div className="col-sm-4 m mt-2">
+            <Link
+              className="thumbnail"
+              href="images/maga-sap.png"
+              target="_blank"
+            >
               <img src={magaSap} alt="apperçu du site maga-sap" />
             </Link>
           </div>
-          <div class="col-sm-4 m mt-2">
-            <Link class="thumbnail" to={"/snake"} target="_blank">
-              <img src={snake} alt="apperçu du jeu snake" />
-            </Link>
+          <div className="col-sm-4 m mt-2">
+            <a className="thumbnail">
+              <ImageWithHoverButton
+                image={snake}
+                buttonText="Essayez moi"
+                buttonOnClick={openModal}
+              />
+            </a>
           </div>
-          <div class="col-sm-4 m mt-2">
+          <div className="col-sm-4 m mt-2">
             <Link
-              class="thumbnail"
+              className="thumbnail"
               href="images/cw_photography.png"
               target="_blank"
             >
               <img src={cwPhoto} alt="apperçu du site cw_photography" />
             </Link>
           </div>
-          <div class="col-sm-4 m mt-2">
+          <div className="col-sm-4 m mt-2">
             <Link
-              class="thumbnail"
+              className="thumbnail"
               href="https://www.linkedin.com/in/kenny-gelabale/"
               target="_blank"
             >

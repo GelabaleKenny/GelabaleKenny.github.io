@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Education from "./Components/Education";
 import Experience from "./Components/Experience";
@@ -10,9 +9,12 @@ import Skills from "./Components/Skills";
 import { useEffect, useRef, useState } from "react";
 import BookmarkDemo from "./Components/Demos/BookmarkDemo";
 import SnakeDemo from "./Components/Demos/SnakeDemo";
+import BookmarkVideo from "./Components/Demos/BookmarkDemo/BookmarkVideo";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalBookmarkOpen, setIsModalBookmarkOpen] = useState(false);
 
   const handleNavClick = (section) => {
     setActiveSection(section);
@@ -38,18 +40,40 @@ function App() {
     });
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const openBookmarkModal = () => {
+    setIsModalBookmarkOpen(true);
+  };
+  const closeBookmarkModal = () => {
+    setIsModalBookmarkOpen(false);
+  };
   return (
     <>
       <Header activeSection={activeSection} handleNavClick={handleNavClick} />
-      <Routes>
-        <Route path="/Bookmark" element={<BookmarkDemo />} />
-        <Route path="/snake" element={<SnakeDemo />} />
-      </Routes>
+      {isModalBookmarkOpen && (
+        <BookmarkVideo
+          handleClose={closeBookmarkModal}
+          videoUrl={
+            "https://drive.google.com/file/d/1_ArYDxZ4CUrIGW8GZYNSCfCrR_y7lr5g/view?usp=sharing"
+          }
+        />
+      )}
+      {isModalOpen && <SnakeDemo closeModal={closeModal} />}
       <Me setActiveSection={setActiveSection} />
       <Skills setActiveSection={setActiveSection} />
       <Experience setActiveSection={setActiveSection} />
       <Education setActiveSection={setActiveSection} />
-      <Portfolio setActiveSection={setActiveSection} />
+      <Portfolio
+        setActiveSection={setActiveSection}
+        openModal={openModal}
+        openBookmarkModal={openBookmarkModal}
+      />
       <Footer />
     </>
   );
