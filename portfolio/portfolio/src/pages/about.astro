@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="À propos | Kenny Gelabale"
+  description="À propos de Kenny Gélabale"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="À propos"
+        tagline=" Plongez-vous dans une mer de découvertes sur moi-même et sur mon parcours empreint de joie et de passion."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Jeanine White at work with a colleague"
+        />
+      </Hero>
+
+      <section>
+        <h2 class="section-title">parcours</h2>
+        <div class="content">
+          <p>
+            Au commencement de mon parcours, j'ai embrassé l'univers du commerce
+            tel un funambule sur sa corde, jonglant entre les rôles de vendeur
+            et de réparateur. Tel un magicien des transactions, je dévoilais les
+            produits sous leur meilleur jour, cherchant à séduire même les plus
+            sceptiques. Avec mes mains habiles comme des saltimbanques, je
+            réparais les maux des appareils électroniques, redonnant vie à leur
+            âme technologique.
+          </p>
+
+          <p>
+            Mais voilà, le destin m'a réservé un nouveau chapitre ! Tel un
+            acrobate de l'autorité, j'ai été promu au poste de responsable de
+            magasin. Dans cet arène, j'ai mené mes troupes de vendeurs avec une
+            baguette de chef d'orchestre, transformant un simple magasin en
+            véritable spectacle. Chaque jour, j'étais le metteur en scène,
+            orchestrant les ventes et les promotions avec une touche de
+            fantaisie.
+          </p>
+
+          <p>
+            De l'humour jongleur aux ficelles du commerce, j'ai su égayer le
+            quotidien de mes collègues et clients. Entre les éclats de rire et
+            les clins d'œil complices, notre équipe était un véritable cirque de
+            bonne humeur ! Dans ce cadre professionnel coloré, j'ai découvert
+            que le rire est le fil conducteur qui tisse des liens inoubliables.
+          </p>
+
+          <p>
+            Aujourd'hui, le chapiteau du commerce a laissé place à de nouveaux
+            horizons, mais je garde toujours en moi les souvenirs étincelants de
+            cette période féerique. Car dans cet univers où l'art de vendre et
+            le rire se mêlaient en une danse éblouissante, j'ai grandi, évolué
+            et embrassé la magie de l'expérience humaine.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>
+            Formation developpeur web fullstack PHP avec spécialisation React
+          </p>
+          <p>BTS Management des unité commercial</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>
+            Html - Css - Javascript - React - Redux - Semantic UI - Bootstrap -
+            PHP - Laravel - MySQL - GitHub
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
